@@ -10,13 +10,16 @@ ssh key
 --------------
 
     repo init -u https://xxxx  -b  zzzz
+
     repo init -u https://xxxx -b yyyy --no-repo-verify
+
     repo init -u https://xxxx -b yyyy -m xxx.xml --no-repo-verify
  
 拉取代码
 ---------
 
     repo sync -j4 -c
+
     repo forall -c 'git lfs pull'
 
 新建本地开发分支
@@ -28,9 +31,11 @@ ssh key
 ----------
 
     repo list
+
     repo overview
      
     cd .repo/manifests
+
     git branch -a
  
 查看本地git配置
@@ -39,7 +44,9 @@ ssh key
     cat .git/config
 
     [branch "myLocalDevBranch"]
+
             remote = someRemoteName
+
             merge = refs/heads/SomeRemoteBranch
 
 
@@ -52,4 +59,5 @@ ssh key
 ---------------------------
 
     git reset --soft HEAD~3
+
     git commit . -m xxxx 
