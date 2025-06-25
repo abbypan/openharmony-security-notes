@@ -19,6 +19,12 @@ OpenHarmony安全笔记
 
 .. toctree::
    :maxdepth: 1
-   :caption: boot
+   :caption: base
 
-   boot/hvb
+   base/startup_hvb
+
+.. toctree::
+   :maxdepth: 1
+   :caption: foundation
+
+   foundation/filemanagement_storage_service
