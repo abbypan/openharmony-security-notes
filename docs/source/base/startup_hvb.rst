@@ -1,8 +1,10 @@
-OpenHarmony Verified Boot (HVB)
+startup_hvb
 =================================
 
 overview
 ------------
+
+OpenHarmony Verified Boot (HVB)
 
 `startup_hvb <https://gitee.com/openharmony/startup_hvb>`_
 
