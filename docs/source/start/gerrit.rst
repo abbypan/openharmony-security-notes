@@ -61,3 +61,9 @@ ssh key
     git reset --soft HEAD~3
 
     git commit . -m xxxx 
+
+
+放弃修改
+----------
+    
+    repo forall -c git stash
