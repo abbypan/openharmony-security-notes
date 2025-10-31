@@ -137,6 +137,14 @@ Ubuntu 环境
 AMD Ryzen 9 5900，64G内存，编译一次约3小时 
 
 
+正点原子 atom-ca1 开发板
+---------------------------
+
+关机，按住 v+ 不放，通电，进loader，切换到maskrom
+
+https://gitee.com/OneOH
+
+
 编译问题：ohos-sdk
 --------------------------
 
