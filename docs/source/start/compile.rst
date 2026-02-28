@@ -6,6 +6,9 @@
 安装WSL ubuntu虚拟机
 -------------------------
 
+开启WSL
+###############
+
 powershell 管理员
 
 .. note::
@@ -18,12 +21,14 @@ powershell 管理员
 
  
 查看版本 
+###############
 
 .. note::
 
     wsl -l -o 
 
 安装 
+###############
 
 .. note::
 
@@ -32,7 +37,8 @@ powershell 管理员
 或者在windows store里安装
 
  
-迁移到D盘：
+迁移到D盘
+###############
 
 .. note::
 
@@ -43,6 +49,17 @@ powershell 管理员
     wsl --unregister Ubuntu-20.04 
 
     wsl --import Ubuntu-20.04 d:\software\vm\ubuntu\  d:\ub.tar   
+
+压缩wsl镜像
+###############
+
+    wsl --shutdown
+
+    diskpart
+
+    DISKPART> select vdisk file = "xxxx\ext4.vhdx"
+
+    DISKPART> compact vdisk
 
 
 Ubuntu 环境
@@ -163,6 +180,14 @@ Ubuntu 环境
 编译后在out/rk3568/packages/phone/images目录下
 
 AMD Ryzen 9 5900，64G内存，编译一次约3小时 
+
+
+正点原子 atom-ca1 开发板
+---------------------------
+
+关机，按住 v+ 不放，通电，进loader，切换到maskrom
+
+https://gitee.com/OneOH
 
 
 编译问题：ohos-sdk
