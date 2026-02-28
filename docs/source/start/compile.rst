@@ -8,6 +8,8 @@
 
 powershell 管理员
 
+.. note::
+
     dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 
     dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
@@ -17,9 +19,13 @@ powershell 管理员
  
 查看版本 
 
+.. note::
+
     wsl -l -o 
 
 安装 
+
+.. note::
 
     wsl --install Ubuntu-20.04  
 
@@ -27,6 +33,8 @@ powershell 管理员
 
  
 迁移到D盘：
+
+.. note::
 
     wsl --shutdown
 
@@ -42,12 +50,16 @@ Ubuntu 环境
 
 设置apt源 
 
+.. note::
+
     sudo sed -i "s@http://.*archive.ubuntu.com@http://mirrors.huaweicloud.com@g" /etc/apt/sources.list
 
     sudo sed -i "s@http://.*security.ubuntu.com@http://mirrors.huaweicloud.com@g" /etc/apt/sources.list
 
  
 切换至bash
+
+.. note::
 
      dpkg-reconfigure dash
 
@@ -59,6 +71,8 @@ Ubuntu 环境
 
 配置ssh key
 
+.. note::
+
     ssh-keygen -t rsa
 
 在 https://gitee.com/profile/sshkeys 配置ssh公钥
@@ -66,6 +80,8 @@ Ubuntu 环境
 打开 https://gitee.com/openharmony/manifest
 
 从克隆-> SSH 中找到git config，配置user.name，user.email
+
+.. note::
 
     git config --global user.name 'xxx'
 
@@ -77,6 +93,8 @@ Ubuntu 环境
 安装repo
 ------------
 
+.. note::
+
     curl https://gitee.com/oschina/repo/raw/fork_flow/repo-py3 | sudo tee /usr/local/bin/repo >/dev/null
 
     sudo chmod a+x /usr/local/bin/repo
@@ -87,6 +105,8 @@ Ubuntu 环境
 
  apt包列表参考 [OpenHamony 5.0.1编译纠错指南 - Withm - 博客园](https://www.cnblogs.com/Luvm/p/18619092)
 
+.. note::
+
     apt-get update
 
     apt-get -f -y install apt-utils vim software-properties-common openssh-server iputils-ping curl net-tools bsdmainutils kmod bc rsync gawk ssh ccache zip python-dev make m4 gcc-multilib ca-certificates-java unzip python3-yaml perl openssl libssl1.1 gnupg xsltproc x11proto-core-dev tcl python3-crypto python-crypto libxml2-utils libxml2-dev libx11-dev libssl-dev libgl1-mesa-dev lib32z1-dev lib32ncurses5-dev g++-multilib flex bison doxygen git subversion tofrodos pigz expect python3-xlrd git-core gperf build-essential zlib1g-dev libc6-dev-i386 lib32z-dev openjdk-8-jdk ruby mtools python3-pip gcc-arm-linux-gnueabi genext2fs liblz4-tool libssl-dev autoconf pkg-config zlib1g-dev libglib2.0-dev libmount-dev libpixman-1-dev libncurses5-dev exuberant-ctags silversearcher-ag libtinfo5 device-tree-compiler libssl-dev libelf-dev dwarves gcc-arm-none-eabi default-jdk u-boot-tools mtd-utils scons automake libtinfo5 gcc-multilib libtool libgmp-dev texinfo mpc autotools-dev libmpc-dev libmpfr-dev libgmp-dev patchutils libexpat-dev libfdt-dev libncursesw5-dev cmake wget libelf-dev
@@ -96,6 +116,8 @@ Ubuntu 环境
 设置python3
 -------------
 
+.. note::
+
     update-alternatives --install /usr/bin/python python /usr/bin/python3.8 1
 
     update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 1 
@@ -104,6 +126,8 @@ Ubuntu 环境
 
 下载openharmony代码
 ----------------------
+
+.. note::
 
     cd ~
 
@@ -123,11 +147,15 @@ Ubuntu 环境
 准备编译环境
 --------------
 
+.. note::
+
     bash ./build/prebuilts_download.sh
 
 
 编译RK3568镜像
 -----------------
+
+.. note::
 
     ./build.sh --product-name rk3568 --ccache --no-prebuilt-sdk 
 
@@ -180,6 +208,8 @@ ls发现版本是20，不是15
        "targetSdkVersion": 20,
 
 再单独编译permission_manager应用
+
+.. note::
 
     ./build.sh --product-name rk3568 --build-target permission_manager
 
