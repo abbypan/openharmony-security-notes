@@ -53,6 +53,8 @@ powershell 管理员
 压缩wsl镜像
 ###############
 
+.. note::
+
     wsl --shutdown
 
     diskpart
